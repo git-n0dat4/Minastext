@@ -16,7 +16,7 @@ namespace Minas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Solicitar_Mantenimiento());
+            Application.Run(new Gestion_Mantenimiento());
         }
     }
 }

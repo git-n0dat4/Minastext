@@ -14,9 +14,6 @@ namespace Minas
     {
         Connection _con = new Connection();
         string fechaSolicitud = DateTime.Now.ToShortDateString();
-        string tipoMantenimiento = "preventivo";
-        string Solicitante = "Operador1";
-        string Maquina = "maquina1";
         public Solicitar_Mantenimiento()
         {
             InitializeComponent();
@@ -25,8 +22,8 @@ namespace Minas
         private void button1_Click(object sender, EventArgs e)
         {
             // Insertar Solicitud Operador
-                _con.InsertData("insert into Solicitud (fechaSolicitud,tipoMantenimiento,solicitante,maquina,fechaAtencion, estado,idTecnico,nameTecnico)" +
-               "values('" +fechaSolicitud+"','"+tipoMantenimiento+ "','"+Solicitante+"','"+Maquina+"','En espera de asignacion','Solicitado','','')");
+          /*      _con.InsertData("insert into Solicitud (fechaSolicitud,tipoMantenimiento,solicitante,maquina,fechaAtencion, estado,idTecnico,nameTecnico)" +
+               "values('" +fechaSolicitud+"','"+TipoM.Text+ "','"+Solicitante.Text+"','"+Maquina.Text+"','En espera de asignacion','Solicitado','','')"); */
         }
     }
 }

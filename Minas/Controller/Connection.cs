@@ -20,7 +20,7 @@ namespace Minas
         public void InsertData(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql, usingConn);
-       //     cmd.CommandText = sql;
+
             usingConn.Open();
             cmd.ExecuteNonQuery();
             usingConn.Close();
@@ -33,9 +33,6 @@ namespace Minas
             SqlDataAdapter data = new SqlDataAdapter(cmd);
             DataTable tabla = new DataTable();
             data.Fill(tabla);
-      //      usingConn.Open();
-      //      cmd.ExecuteNonQuery();
-      //      usingConn.Close();
             return tabla;
         }
     }

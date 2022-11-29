@@ -42,7 +42,7 @@ namespace Minas
                 string dataID = datat.Rows[n].Cells[0].Value.ToString();
                 if (dataID != null && dataID != "") 
                 {
-                    Console.WriteLine(idSolicitud =  Convert.ToInt32(dataID));
+                    idSolicitud =  Convert.ToInt32(dataID);
                     
                 }
             }
@@ -60,8 +60,14 @@ namespace Minas
                     disp = (bool)datat1.Rows[n].Cells[2].Value;
                     if (disp.Equals(true))
                     {
-                        Console.WriteLine(idTecnico = Convert.ToInt32(dataID));
-                        Console.WriteLine(nameTecnico = datat1.Rows[n].Cells[1].Value.ToString());
+                        idTecnico = Convert.ToInt32(dataID);
+                        nameTecnico = datat1.Rows[n].Cells[1].Value.ToString();
+                    }
+                    else
+                    {
+                         idSolicitud = 0;
+                         idTecnico = 0;
+                         nameTecnico = "";
                     }
                 
                 }
